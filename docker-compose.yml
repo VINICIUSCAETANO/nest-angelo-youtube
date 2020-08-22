@@ -1,0 +1,14 @@
+version: '2.0'
+
+services:
+  
+  database:
+    image: postgres:13
+    ports:
+      - "5435:5432"
+    environment:
+      POSTGRES_PASSWORD: dbpass
+      POSTGRES_USER: javielrezende
+      POSTGRES_DB: angeloyt
+    volumes:
+      - ./.docker/postgres:/var/lib/postgresql/data
